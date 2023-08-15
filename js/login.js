@@ -11,17 +11,17 @@ document.getElementById('btn-submit').addEventListener('click', function () {
     // 3.c get the value from the element
     const passwordField = document.getElementById('user-password');
     const password = passwordField.value;
-    
+
     // ______________________________________
     // DANGER: DO NOT VERIFY EMAIL PASSWORD ON THE CLIENT SIDE
     // ______________________________________
 
     // step 4: verify email and password
     if(email === 'sontan@baap.com' && password === 'secret'){
-        console.log('valid user');
+        window.location.href = 'bank.html';
     }
     else{
-        console.log('invalid user');
+        alert('Please enter correct email or password !');
     }
 
 });
