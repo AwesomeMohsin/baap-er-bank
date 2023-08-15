@@ -15,7 +15,8 @@
         </h1>
     </header>
     <main>
-        <section class="pt-12">
+        <section class="mt-12">
+
             <div class="grid grid-cols-3 gap-4 w-9/12 mx-auto text-white">
 
                 <div class="bg-green-500 p-8 rounded-xl">
@@ -34,6 +35,35 @@
                 </div>
 
             </div>
+
+        </section>
+
+        <!-- Deposit and Withdraw input -->
+        <section class="mt-12">
+
+            <div class="grid grid-cols-2 gap-4 w-9/12 mx-auto text-white">
+
+                <div class="bg-fuchsia-300 p-8 rounded-xl">
+                    <h3 class="text-2xl mb-4">Please Deposit</h3>
+                    <input class="w-9/12 block mb-2 px-3" type="number" name="deposit"
+                        placeholder="$ Amount you want to deposit" id="deposit-field">
+
+                    <button id="btn-deposit"
+                        class="bg-amber-600 hover:bg-sky-300 px-8 py-2 text-white font-medium rounded-lg">Deposit</button>
+
+                </div>
+
+                <div class="bg-lime-300 p-8 rounded-xl">
+                    <h3 class="text-2xl mb-4">Please Withdraw</h3>
+                    <input class="w-9/12 block mb-2 px-3" type="number" name="withdraw"
+                        placeholder="$ Amount you want to withdraw" id="withdraw-field">
+
+                    <button id="btn-withdraw"
+                        class="bg-amber-600 hover:bg-sky-300 px-8 py-2 text-white font-medium rounded-lg">Withdraw</button>
+                </div>
+
+            </div>
+
         </section>
 
     </main>
