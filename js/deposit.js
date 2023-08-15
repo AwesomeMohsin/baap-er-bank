@@ -1,14 +1,21 @@
 // Step 1: add event listener to the deposit button
 
-document.getElementById('btn-deposit').addEventListener('click', function(){
+document.getElementById('btn-deposit').addEventListener('click', function () {
 
-    
+
     // Step 2: Get the deposit amount from the deposit input field
     // For input field use .value to get the value from inside of the input.
     const depositField = document.getElementById('deposit-field');
     const newDepositAmountString = depositField.value;
     const newDepositAmount = parseFloat(newDepositAmountString);
 
+    // step 7: clear the deposit field
+    depositField.value = '';
+
+    if (isNaN(newDepositAmount)) {
+        alert('Please provide a valid number');
+        return;
+    };
 
     // Step 3: Get the current deposit total amount
     // for non input (element other than input, textarea), use innerText to get the text
@@ -19,7 +26,7 @@ document.getElementById('btn-deposit').addEventListener('click', function(){
 
 
     // Step 4: add numbers to set the total deposit
-    const currentDepositTotal = previousDepositTotal+newDepositAmount;
+    const currentDepositTotal = previousDepositTotal + newDepositAmount;
 
     // set the deposit total
     depositTotalElement.innerText = currentDepositTotal;
@@ -37,8 +44,7 @@ document.getElementById('btn-deposit').addEventListener('click', function(){
     balanceTotalElement.innerText = currentBalanceTotal;
 
 
-    // step 7: clear the deposit field
-    depositField.value = '';
+
 
 
 })
